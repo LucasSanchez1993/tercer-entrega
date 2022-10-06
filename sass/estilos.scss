@@ -1,0 +1,289 @@
+// mi index
+
+@import "utilities/variables";
+@import "utilities/listas";
+@import "utilities/mixin";
+@import "utilities/extend";
+
+/* estilos de body index */
+
+body{
+    background-image: url(../img/playalogo.jpg);
+    nav{
+        background-color: nth($colores,4 );
+        text-align: center;
+        font-family: sans-serif;
+        margin: 0.2rem;
+        h1{
+            text-align: left;
+            color: rgb(11, 11, 12);
+        }
+        div{
+            justify-content: end;
+        }
+        .pagil{
+            border-style:groove;
+            color: wheat;
+            padding: 0.2rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    }
+    main{
+        background-image: url(../img/playalogo.jpg);
+        @extend %flex;
+        h2{
+            color:nth($colores,3 ) ;
+            background-color: aquamarine;
+         }
+        .boton{
+            @include botones;
+         }
+     }
+     section{
+        display: none;
+     }
+     footer{
+        background-color: $color-footer-index;
+        color:#F5EDDC ;
+        text-align: center;
+     }
+}
+.logo{
+    width: 10%;
+}
+
+/* media queris index */
+
+@media screen and (min-width:600px){
+    body{
+        background-image: url(../img/playalogo.jpg);
+        nav{
+            background-color: nth($colores,4 );
+            text-align: center;
+            font-family: sans-serif;
+            margin: 0.2rem;
+            h1{
+                text-align: left;
+                color: rgb(11, 11, 12);
+            }
+            div{
+                justify-content: end;
+            }
+            .pagil{
+                border-style: initial;
+                padding: 1px;
+                background-color: aquamarine;
+                color: black;
+            }
+        }
+        main{
+            height: 75vh;
+             
+             display: grid;
+             grid-template-columns:2fr 2fr ;
+             grid-template-rows: 1fr 1fr 1fr;
+             grid-template-areas:
+             "h2 img"
+             "p img"
+             "boton img";
+             justify-content: center;
+             justify-items: center;
+             h2{
+                grid-area: h2;
+               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             }
+             p{
+                grid-area: p;
+                justify-content: left;
+             }
+             .boton{
+                grid-area: boton;
+                justify-content: left;
+                &:hover{
+                    background-color: rgb(143, 143, 88);
+                    box-shadow: 1px, 1px, 1px black;
+                }
+             }
+             img{
+                grid-area: img;
+                width: 99%;
+             }
+          
+          }
+          section{
+            display: block;
+            animation-name: color-fondo;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            display: flex;
+            flex-direction: row;
+            gap: 0.8rem;
+            justify-content: center;
+            align-items: flex-end;
+            }
+      @keyframes color-fondo {
+         0%{
+            background-color: #cee9e4;
+         }
+         50%{
+            background-color:#a5eee1 ;
+         }
+         100%{
+            background-color: #79f0da;
+         }
+         
+      }
+      
+      section div img{
+         padding: 0.1rem;
+      }
+    }
+}
+
+/* estilos de hoteles */
+
+.hoteles-nav{
+    background-color:nth($colores,5);
+    div a{
+        @include navegador;
+    }
+}
+
+.hoteles-main{
+    @extend %flex;
+    h2{
+        background-color:wheat ;
+        box-shadow: 1.5px 1.5px 1.5px;
+    }
+}
+
+@media screen and (min-width:600px){
+    .hoteles-main{
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+        grid-template-rows: 1fr, 2fr;
+        grid-template-areas:
+        "h2 h2"
+        "h3 img";
+    }
+    .hoteles-main h2{
+        grid-area: h2;
+        justify-content: space-around;
+        font-size: xx-large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: wheat;
+        border-radius: 10%;
+        box-shadow: 1px 1px 1px black;
+        padding: 0.5rem;
+    }
+}
+
+// nosotros
+
+/* estilos nosotros */
+
+.nosotros-nav{
+    background-color:nth($colores,5);
+    div a{
+        border-style: ridge;
+        background-color:black;
+        color: wheat;
+        padding: 0.2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+    }
+}
+
+.nosotros-main{
+    @extend %flex;
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 1000;
+    }
+    h2{
+        background-color: rgb(10, 10, 59);
+    }
+}
+
+.video{
+    width: 95%;
+}
+
+// playas
+
+/* estilos de playa */
+
+.playas-nav{
+    background-color:nth($colores,5);
+    div a{
+        border-style: ridge;
+        background-color:black;
+        color: wheat;
+        padding: 0.2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+    }
+}
+
+.playas-main{
+    display: flex;
+}
+
+@media screen and (min-width:600px){
+    .playas-main{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:.3fr 1fr 1fr ;
+        grid-template-areas: 
+        "playas-uno playas-uno playas-uno"
+        "img-uno img-dos img-tres"
+        "img-cuatro img-cinco img-seis";
+    }
+    .playas-uno{
+        grid-area: playas-uno;
+        justify-content: start;
+    }
+
+    .card{
+        margin-top: 0.6rem;
+    }
+}
+
+// cuentas
+
+/* estilos de cuentas */
+
+.cuenta-nav{
+    background-color:nth($colores,5);
+    div a{
+        border-style: ridge;
+        background-color:black;
+        color: wheat;
+        padding: 0.2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+}
+ .cuentas{
+    display: block;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .cuentasp{
+    color: blue;
+    &:hover{
+        color: brown;
+    }
+ }
+
+ .cuadro{
+    background-color: nth($colores,4);
+ }
+
+ /* footer de todos */
+
+ .footer-todos{
+    background-color: $color-footer-otros;
+    color: whitesmoke;
+ }
+ 
