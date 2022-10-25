@@ -3,40 +3,56 @@ body main, .hoteles-main, .nosotros-main {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 2px; }
+  padding: 2px;
+  justify-content: center; }
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
 
 /* estilos de body index */
 body {
   background-image: url(../img/playalogo.jpg); }
   body nav {
-    background-color: rgba(219, 207, 29, 0.685);
+    background-color: rgba(5, 94, 105, 0.699);
     text-align: center;
     font-family: sans-serif;
     margin: 0.2rem; }
-    body nav h1 {
-      text-align: left;
-      color: #0b0b0c; }
     body nav div {
-      justify-content: end; }
+      justify-content: flex-end; }
     body nav .pagil {
       border-style: groove;
       color: wheat;
       padding: 0.2rem;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      align-content: flex-end; }
   body main {
-    background-image: url(../img/playalogo.jpg); }
+    background-image: url(../img/fondo-azul.jpg); }
+    body main h1 {
+      color: white;
+      font-weight: 1000;
+      font-size: xx-large; }
     body main h2 {
-      color: #5151ac;
-      background-color: aquamarine; }
-    body main .boton {
-      background-color: #1CD6CE;
+      color: #eff1cb;
+      justify-content: center; }
+    body main img {
+      display: block;
+      border-radius: 30px;
+      width: 95%;
+      align-items: center;
+      padding: 3px; }
+    body main button {
+      background-color: #0e0842;
       color: white;
       padding: 0.5rem;
       margin: 0.3rem;
-      box-shadow: 2px 2px 1px blue;
       letter-spacing: 2px;
       font-weight: bold;
-      width: 40%; }
+      width: 40%;
+      border-radius: 30px; }
+      body main button:hover {
+        background-color: #8f8f58; }
   body section {
     display: none; }
   body footer {
@@ -50,9 +66,9 @@ body {
 /* media queris index */
 @media screen and (min-width: 600px) {
   body {
-    background-image: url(../img/playalogo.jpg); }
+    background-image: url(../img/fondo-azul.jpg); }
     body nav {
-      background-color: rgba(219, 207, 29, 0.685);
+      background-color: rgba(5, 94, 105, 0.699);
       text-align: center;
       font-family: sans-serif;
       margin: 0.2rem; }
@@ -66,29 +82,32 @@ body {
         padding: 1px;
         background-color: aquamarine;
         color: black; }
-    body main {
-      height: 75vh;
+    body .mainind {
       display: grid;
-      grid-template-columns: 2fr 2fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "h2 img" "p img" "boton img";
-      justify-content: center;
-      justify-items: center; }
-      body main h2 {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: 1fr 1fr 1fr  1fr 1fr;
+      grid-template-areas: "h1 h1 h1" "h2 h2 h2" "img img img" "img img img" "button button button";
+      justify-content: center; }
+      body .mainind h1 {
+        grid-area: h1;
+        justify-content: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        font-weight: 1000;
+        font-size: 300%; }
+      body .mainind h2 {
         grid-area: h2;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-      body main p {
-        grid-area: p;
-        justify-content: left; }
-      body main .boton {
-        grid-area: boton;
-        justify-content: left; }
-        body main .boton:hover {
-          background-color: #8f8f58;
-          box-shadow: 1px, 1px, 1px black; }
-      body main img {
+        justify-content: center;
+        color: yellow;
+        max-width: 70%; }
+      body .mainind img {
         grid-area: img;
-        width: 99%; }
+        display: block;
+        border-radius: 30px; }
+      body .mainind .boton {
+        grid-area: button; }
+        body .mainind .boton:hover {
+          background-color: #8f8f58; }
     body section {
       display: block;
       animation-name: color-fondo;
@@ -119,25 +138,31 @@ body {
     padding: 0.2rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-.hoteles-main h2 {
-  background-color: wheat;
-  box-shadow: 1.5px 1.5px 1.5px; }
+.hoteles-main {
+  color: white; }
 
 @media screen and (min-width: 600px) {
-  .hoteles-main {
+  .hotelesm {
     display: grid;
-    grid-template-columns: 1fr, 2fr;
-    grid-template-rows: 1fr, 2fr;
-    grid-template-areas: "h2 h2" "h3 img"; }
-  .hoteles-main h2 {
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 0.5fr,1 fr, 1fr;
+    grid-template-areas: "hoteleshuno hoteleshuno" "h2 lujosos" "hbaratos baratos"; }
+  .hoteleshuno {
+    grid-area: hoteleshuno; }
+  h2 {
     grid-area: h2;
-    justify-content: space-around;
-    font-size: xx-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: wheat;
-    border-radius: 10%;
-    box-shadow: 1px 1px 1px black;
-    padding: 0.5rem; } }
+    justify-content: center;
+    max-width: 70%; }
+  .lujosos {
+    grid-area: lujosos;
+    width: 80%; }
+  .hbaratos {
+    grid-area: hbaratos;
+    width: 80%; }
+  .baratos {
+    grid-area: baratos;
+    justify-content: center;
+    max-width: 70%; } }
 
 /* estilos nosotros */
 .nosotros-nav {
@@ -151,10 +176,16 @@ body {
 
 .nosotros-main h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 1000; }
+  font-weight: 4000; }
 
 .nosotros-main h2 {
-  background-color: #0a0a3b; }
+  color: #a5eee1;
+  max-width: 75%;
+  justify-content: center; }
+
+.nosotros-main h3 {
+  color: #bddd2d;
+  justify-content: center; }
 
 .video {
   width: 95%; }
@@ -171,18 +202,27 @@ body {
 
 .playas-main {
   display: flex; }
+  .playas-main div {
+    font-weight: 1000; }
+
+.card {
+  gap: 0.7rem;
+  width: 90%;
+  align-items: center;
+  background-color: #e2d3d3; }
 
 @media screen and (min-width: 600px) {
   .playas-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .3fr 1fr 1fr;
-    grid-template-areas: "playas-uno playas-uno playas-uno" "img-uno img-dos img-tres" "img-cuatro img-cinco img-seis"; }
+    grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+    grid-template-areas: "playas-uno playas-uno playas-uno" "hdosplayas hdosplayas hdosplayas" "img-uno img-dos img-tres" "img-cuatro img-cinco img-seis" "img-siete img-ocho img-nueve"; }
   .playas-uno {
     grid-area: playas-uno;
     justify-content: start; }
-  .card {
-    margin-top: 0.6rem; } }
+  .hdosplayas {
+    grid-area: hdosplayas;
+    justify-content: center; } }
 
 /* estilos de cuentas */
 .cuenta-nav {
@@ -200,12 +240,25 @@ body {
   flex-direction: column; }
 
 .cuentasp {
-  color: blue; }
+  color: greenyellow; }
   .cuentasp:hover {
     color: brown; }
 
 .cuadro {
-  background-color: rgba(219, 207, 29, 0.685); }
+  background-color: rgba(219, 207, 29, 0.685);
+  border-radius: 1rem; }
+
+.comentarioc {
+  width: 60%;
+  background-color: rgba(219, 207, 29, 0.685);
+  border-radius: 1rem; }
+
+.botonc {
+  border-radius: 0.8rem;
+  background-color: #0d0d3f;
+  color: #d8e0ba; }
+  .botonc:hover {
+    color: brown; }
 
 /* footer de todos */
 .footer-todos {

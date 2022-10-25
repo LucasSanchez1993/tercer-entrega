@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Podemos ver uno de los hoteles mas baratos y lujosos con sus mejores descuentos..."> 
+    <meta name="keywords" content="hoteles, imagenes">
        <!-- CSS bt -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> 
-    
+       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
        <!-- link css -->
        <link rel="stylesheet" href="../css/main.css">
@@ -15,8 +17,8 @@
 <body class="hoteles">
     <header class="container-fluid">
         <nav class="hoteles-nav row navbar navbar-expand-lg ">
-          <a class="col-6" href="../index.html"><img src="../img/logo (1).png" alt="logo"></a>
-           <div class=" col-6 container-fluid">
+          <a class="col-1" href="../index.html"><img src="../img/logo (1).png" alt="logo"></a>
+           <div class=" col-11 container-fluid">
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
@@ -32,10 +34,10 @@
            
          </nav>
    </header>
-   <main class="hoteles-main">
-    <h2>Imagenes de hoteles</h2>
-    <h3>Aca  podemos observar unos de los nuestros hoteles mas lujosos, en lugares como Villa Gessell, Miramar, mar azul, entre otros.</h3>
-    <div>
+   <main class="hotelesm">
+    <h1 class="hoteleshuno">Imagenes de hoteles</h1>
+    <h2>Aca  podemos observar unos de los nuestros hoteles mas lujosos, en lugares como Villa Gessell, Miramar, mar azul, entre otros.</h2>
+    <div data-aos="fade-down-right" class="lujosos">
       <div id="carouselExampleControls" class=" hoteles-c carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -64,7 +66,34 @@
         </button>
       </div>
     </div>
-   </main>
+    <h2 class="baratos">Estos son algunos de los hoteles mas baratos y accesibles a los bolsillos.</h2>
+    <div data-aos="fade-down-left" class="hbaratos">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/hotel-barato.jpg" class="d-block w-100" alt="hotel-barato">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/hotel-chiavari.jpg" class="d-block w-100" alt="hotel-chiavari">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/hotel-dos-reyes.jpg" class="d-block w-100" alt="hotel-dos-reyes">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/san-remo.jpg" class="d-block w-100" alt="hotel-san-remo">
+          </div>
+  
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </main>
    <section>
     <h3 class="sectionhi">Contactanos</h3>
     <h4>Telefono: 1157123456</h4>
@@ -84,6 +113,10 @@
 </footer>
 
     <!-- JavaScript Bundle with Popper -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

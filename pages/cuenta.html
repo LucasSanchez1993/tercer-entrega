@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aca podes ingresar, registrar y comentar sobre esta pagina..."> 
+    <meta name="keywords" content="cuenta, registro, comentario">
        <!-- CSS bt -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> 
 
@@ -16,8 +18,8 @@
   <body>
     <header class="container-fluid">
         <nav class="cuenta-nav row navbar navbar-expand-lg ">
-          <a class="col-6" href="../index.html"><img src="../img/logo (1).png" alt="logo"></a>
-           <div class=" col-6 container-fluid">
+          <a class="col-1" href="../index.html"><img src="../img/logo (1).png" alt="logo"></a>
+           <div class=" col-11 container-fluid">
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
@@ -46,14 +48,28 @@
         <input type="email" id="correo">
       </div>
       <div>
-        <input type="submit">
-        <input type="reset">
+        <input class="botonc" type="submit">
+        <input class="botonc" type="reset">
       </div>
       </fieldset>
     </form>
     <br><br>
     <p class="cuentasp">¿Olvidastes la contraseña?</p>
     <p class="cuentasp">Registrate</p>
+   <h2>Dejanos tu comentario</h2>
+   <div class="comentarioc">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Ingresa tu Email</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div>
+        <input class="botonc" type="submit">
+      </div>
+    </div>
+   
   </main>
   <section>
     <h3 class="sectionhi">Contactanos</h3>
